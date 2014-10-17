@@ -4,18 +4,16 @@
                       http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.concordion</groupId>
-  <artifactId>concordion-extensions-demo-selenium2</artifactId>
-  <version>1.1.0.4</version>
+  <artifactId>concordion-logging-tooltip-extension-demo</artifactId>
+  <version>1.1.2</version>
 
-  <description>
-    Sample Concordion tests using extensions from the concordion-extensions project.
-  </description>
+  <description>Demonstrates the usage of the Concordion logging tooltip extension.</description>
 
-  <url>http://concordion-extensions.googlecode.com</url>
+  <url>https://github.com/concordion/concordion-logging-tooltip-extension-demo</url>
 
   <issueManagement>
-    <system>GoogleCode</system>
-    <url>http://code.google.com/p/concordion-extensions/issues</url>
+    <system>Github</system>
+    <url>https://github.com/concordion/concordion-logging-tooltip-extension-demo/issues</url>
   </issueManagement>
 
   <licenses>
@@ -27,9 +25,8 @@
   </licenses>
 
   <scm>
-    <url>http://code.google.com/p/concordion-extensions/source/browse/demo/selenium2</url>
-    <connection>scm:hg:http://concordion-extensions.googlecode.com/hg/demo/selenium2</connection>
-    <developerConnection>scm:hg:https://concordion-extensions.googlecode.com/hg/demo/selenium2</developerConnection>
+    <url>https://github.com/concordion/concordion-logging-tooltip-extension-demo.git</url>
+    <developerConnection>git@github.com:concordion/concordion-logging-tooltip-extension-demo.git</developerConnection>
   </scm>
 
   <developers>
@@ -48,18 +45,12 @@
       <artifactId>concordion</artifactId>
       <version>${concordion.version}</version>
       <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>xml-apis</groupId>
-          <artifactId>xml-apis</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
 
     <dependency>
       <groupId>org.concordion</groupId>
-      <artifactId>concordion-extensions</artifactId>
-      <version>${concordion-extensions.version}</version>
+      <artifactId>concordion-logging-tooltip-extension</artifactId>
+      <version>${concordion-logging-extension.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -68,7 +59,6 @@
       <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
       <scope>test</scope>
-      <type>pom</type>
     </dependency>
 
     <dependency>
@@ -84,7 +74,6 @@
       <version>${slf4j.version}</version>
       <scope>runtime</scope>
     </dependency>
-    
   </dependencies>
 
   <build>
@@ -108,7 +97,7 @@
             <concordion.output.dir>target/concordion</concordion.output.dir>
           </systemPropertyVariables>
           <includes>
-            <include>**/ExtensionsDemo.java</include>
+            <include>**/LoggingTooltipDemo.java</include>
           </includes>
         </configuration>
       </plugin>
@@ -117,9 +106,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <selenium.version>[2.23.0,)</selenium.version>
+    <selenium.version>[2.43.0,)</selenium.version>
     <slf4j.version>1.6.1</slf4j.version>    
-    <concordion.version>1.4.3</concordion.version>
-    <concordion-extensions.version>1.1.0</concordion-extensions.version>
+    <concordion.version>1.4.4</concordion.version>
+    <concordion-logging-extension.version>1.1.2</concordion-logging-extension.version>
   </properties>
 </project>

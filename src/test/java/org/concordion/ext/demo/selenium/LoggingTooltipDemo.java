@@ -19,11 +19,11 @@ import org.junit.runner.RunWith;
  */
 @RunWith(ConcordionRunner.class)
 @Extensions(LoggingTooltipExtension.class)
-public class LoggingDemo extends GoogleFixture {
+public class LoggingTooltipDemo extends GoogleFixture {
 	
  	GoogleResultsPage resultsPage;
 
- 	public LoggingDemo() {
+ 	public LoggingTooltipDemo() {
         super(true);
     }
     
