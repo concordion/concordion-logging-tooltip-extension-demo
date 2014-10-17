@@ -47,7 +47,7 @@ The result text is logged from the `GoogleResultsPage`.
 
 Logging the implementation details in this way allows us to ["retain a clear separation between intent and implementation, yet allow non-developers to be reassured that the test has been implemented correctly"](http://blog.davidpeterson.co.uk/2011/01/concordion-extensions.html).
 
-By default this extension logs all output written using `java.util.logging`, with [configuration options](http://concordion.org/extensions/LoggingTooltipExtension.html#Configuration) to restrict the output that is included.
+By default this extension logs all output written using `java.util.logging`, with [configuration options](https://github.com/concordion/concordion-logging-tooltip-extension#custom-configuration) to restrict the output that is included.
     
 Potential Issues
 ------------------------
