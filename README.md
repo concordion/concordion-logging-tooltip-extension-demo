@@ -3,7 +3,7 @@ Introduction
 
 This project demonstrates the usage of the [Concordion](http://concordion.org) [Logging Tooltip Extension](http://github.com/concordion/concordion-logging-tooltip-extension) with [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/).
 
-Example output is shown [here](http://concordion.github.io/concordion-logging-tooltip-extension-demo/spec/LoggingTooltipDemo.html).
+Example output is shown [here](http://concordion.github.io/concordion-logging-tooltip-extension-demo/spec/org/concordion/ext/demo/selenium/LoggingTooltipDemo.html).
     
 Running the tests
 ---------------------------
@@ -35,7 +35,7 @@ The test will open a Firefox browser and perform some Google searches.
 The test should pass successfully.
 
 ### Concordion output
-The output folder should contain the following specification. (You can see an example of it [here](http://concordion.github.io/concordion-logging-tooltip-extension-demo/spec/LoggingTooltipDemo.html)).
+The output folder should contain the following specification. (You can see an example of it [here](http://concordion.github.io/concordion-logging-tooltip-extension-demo/spec/org/concordion/ext/demo/selenium/LoggingTooltipDemo.html)).
     
 #### LoggingTooltipDemo.html
 
