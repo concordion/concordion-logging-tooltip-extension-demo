@@ -1,8 +1,9 @@
 package org.concordion.ext.demo.selenium;
 
-import org.concordion.api.extension.Extensions;
+import org.concordion.api.extension.Extension;
 import org.concordion.ext.LoggingTooltipExtension;
 import org.concordion.ext.demo.selenium.web.GoogleResultsPage;
+import org.concordion.ext.tooltip.TooltipButton;
 import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 
@@ -18,13 +19,18 @@ import org.junit.runner.RunWith;
  * Run this class as a JUnit test to produce the Concordion results.
  */
 @RunWith(ConcordionRunner.class)
-@Extensions(LoggingTooltipExtension.class)
 public class LoggingTooltipDemo extends GoogleFixture {
 	
  	GoogleResultsPage resultsPage;
+ 	TooltipButton toggleButton;
+ 	
+ 	@Extension
+ 	public LoggingTooltipExtension extension = new LoggingTooltipExtension();
 
  	public LoggingTooltipDemo() {
         super(true);
+        toggleButton = new ToggleTooltipButton();
+        extension.setTooltipButton(toggleButton);
     }
     
 	/**
@@ -39,5 +45,17 @@ public class LoggingTooltipDemo extends GoogleFixture {
 	 */
 	public String getCalculatorResult() {
 		return resultsPage.getCalculatorResult();
+	}
+	
+	/**
+	 * Hides tooltips if parameter is not empty
+	 */
+	public void hideTooltip(String tooltipHidden) {
+		boolean displayTooltip = true;
+		if(tooltipHidden != null) {
+			// Tooltip is hidden only if param is set and not empty
+			displayTooltip = tooltipHidden.isEmpty();
+		}
+		extension.toggleTooltip(displayTooltip);
 	}
 }

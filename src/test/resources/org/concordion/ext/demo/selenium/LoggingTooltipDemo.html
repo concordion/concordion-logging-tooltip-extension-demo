@@ -1,32 +1,22 @@
 <html xmlns:c="http://www.concordion.org/2007/concordion">
 <link href="../../concordion.css" rel="stylesheet" type="text/css" />
-
-<script>
-    function toggleTooltip() {
-        var tooltips = document.querySelectorAll('a.tt');
-        for(var i in tooltips) {
-            if(tooltips[i].style.display == 'none') {
-                tooltips[i].style.display = 'initial';
-                document.getElementById('tooltipButton').value = "Hide tooltip";
-            } else {
-                tooltips[i].style.display = 'none';
-                document.getElementById('tooltipButton').value = "Show tooltip";
-            }
-        }
-    }
-</script>
-
 <body>
 
 <h1>Google Calculator</h1>
 
 <p>Google acts as a calculator if you enter a sum.</p> 
 
+<!-- Optional: it is possible to hide tooltips by setting #tooltipHidden variable -->
+<div style="display: none;">
+  <span c:set="#tooltipHidden"></span>
+</div>
+
 <div class="example">
 <h4>Example</h4>
 <p>Googling "<span c:execute="searchFor(#TEXT)">11 * 12</span>" displays "<span c:assertEquals="getCalculatorResult()">132</span>".</p>
 <p style="font-style: italic;">(Hover over the i icons to see the logging.)</p>
-<input type="button" id="tooltipButton" value="Hide tooltip" onclick="toggleTooltip();" />
+<br />
+<input type="button" c:execute="hideTooltip(#tooltipHidden)" onclick="toggleTooltip();" value="Toggle tooltip" />
 </div>
 
 </body>
