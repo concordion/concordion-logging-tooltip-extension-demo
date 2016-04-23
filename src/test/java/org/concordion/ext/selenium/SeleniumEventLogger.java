@@ -55,6 +55,14 @@ public class SeleniumEventLogger implements WebDriverEventListener {
     }
 
     @Override
+    public void beforeNavigateRefresh(WebDriver driver) {
+    }
+
+    @Override
+    public void afterNavigateRefresh(WebDriver driver) {
+    }
+
+    @Override
     public void afterNavigateTo(String arg0, WebDriver arg1) {
         logger.info("Navigated to '{}'", arg0);
     }
