@@ -2,7 +2,7 @@ package org.concordion.ext.demo.selenium.web;
 
 import org.concordion.ext.selenium.SeleniumEventLogger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
