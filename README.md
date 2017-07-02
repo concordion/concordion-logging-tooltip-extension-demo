@@ -11,7 +11,7 @@ Example output is shown [here](http://concordion.github.io/concordion-logging-to
 Running the tests
 ---------------------------
 
-The tests use Selenium's FirefoxDriver, so you'll need to have Firefox installed (or you could change the code to use a different driver).
+The tests use Selenium's ChromeDriver, so you'll need to have Chrome installed (or you could change the code to use a different driver).
     
 The download includes support to run the tests with either <a href="http://www.gradle.org/">Gradle</a> or <a href="http://maven.apache.org/">Maven</a>.  
     
@@ -32,7 +32,7 @@ Under the `src/test/java` folder, find the `ExceptionTranslatorDemo` class in th
 
 What you should see
 --------------------------------
-The test will open a Firefox browser and perform some Google searches.
+The test will open a Chrome browser and perform some Google searches.
     
 ### JUnit output
 The test should pass successfully.
