@@ -11,7 +11,10 @@ Example output is shown [here](http://concordion.github.io/concordion-logging-to
 Running the tests
 ---------------------------
 
-The tests use Selenium's ChromeDriver, so you'll need to have Chrome installed (or you could change the code to use a different driver).
+The tests use Selenium's ChromeDriver, so you'll need to have:
+
+1. Chrome installed (or you could change the code to use a different driver).
+1. chromedriver installed and added to the `PATH` (or the `webdriver.chrome.driver` system property set)
     
 The download includes support to run the tests with either <a href="http://www.gradle.org/">Gradle</a> or <a href="http://maven.apache.org/">Maven</a>.  
     
