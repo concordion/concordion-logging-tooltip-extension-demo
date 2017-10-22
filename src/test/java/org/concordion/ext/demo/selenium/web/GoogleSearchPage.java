@@ -16,10 +16,6 @@ public class GoogleSearchPage {
 	@FindBy(name = "q") 
 	private WebElement queryBox;
 	
-    @CacheLookup
-	@FindBy(name = "btnG") 
-	private WebElement submitButton;
-	
     @FindBy(className = "nonExistent")
     private WebElement nonExistentLink;
 
@@ -41,7 +37,7 @@ public class GoogleSearchPage {
 	public GoogleResultsPage searchFor(String query) {
         queryBox.sendKeys(query);
         queryBox.sendKeys(Keys.ESCAPE);
-		submitButton.click();
+		queryBox.sendKeys(Keys.RETURN);
 		return new GoogleResultsPage(driver);
 	}
     
