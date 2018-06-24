@@ -3,7 +3,7 @@ apply plugin: 'java'
 description = 'Demonstration of the concordion logging tooltip extension'
 
 wrapper {
-    gradleVersion = "2.12"
+    gradleVersion = "4.8.1"
 }
 
 repositories {
