@@ -114,7 +114,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium.version>[2.43.0,)</selenium.version>
     <slf4j.version>1.6.1</slf4j.version>    
-    <concordion.version>2.1.0</concordion.version>
+    <concordion.version>2.2.0</concordion.version>
     <concordion-logging-extension.version>1.1.2</concordion-logging-extension.version>
   </properties>
 </project>
