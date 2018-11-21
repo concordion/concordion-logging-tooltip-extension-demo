@@ -1,10 +1,18 @@
 language: java
 
-jdk:
-- openjdk11
-- openjdk10
-- oraclejdk9
-- oraclejdk8
+matrix:
+  include:
+    - jdk: openjdk11
+      before_install:
+        - rm "${JAVA_HOME}/lib/security/cacerts"
+        - ln -s /etc/ssl/certs/java/cacerts "${JAVA_HOME}/lib/security/cacerts"
+    - jdk: openjdk10
+      before_install:
+        - rm "${JAVA_HOME}/lib/security/cacerts"
+        - ln -s /etc/ssl/certs/java/cacerts "${JAVA_HOME}/lib/security/cacerts"
+    - jdk: oraclejdk9
+    - jdk: oraclejdk8
+
 env:
   global:
   - secure: SmyaV4ZzuAwS9qPmZuQm8Gm2UsRbKvsxPAUU4DkQM9UX4yR0x4RPRrsPC8rKhaAq5V6IdkBHJhpWTtdqkMQAQRD3eiNKjDAfYNOG3RdU8cOy1YxnGDfJn1iYJ49ntw9HCXXkJVuCdF9oNehFvgxJg2OW/iTB14FNkrE1JIf4WlU=
