@@ -6,10 +6,17 @@
 
 <p>Google acts as a calculator if you enter a sum.</p> 
 
+<!-- Optional: it is possible to hide tooltips by setting #tooltipHidden variable -->
+<div style="display: none;">
+  <span c:set="#tooltipHidden"></span>
+</div>
+
 <div class="example">
 <h4>Example</h4>
 <p>Googling "<span c:execute="searchFor(#TEXT)">11 * 12</span>" displays "<span c:assertEquals="getCalculatorResult()">132</span>".</p>
 <p style="font-style: italic;">(Hover over the i icons to see the logging.)</p>
+<br />
+<input type="button" c:execute="hideTooltip(#tooltipHidden)" onclick="toggleTooltip();" value="Toggle tooltip" />
 </div>
 
 </body>
