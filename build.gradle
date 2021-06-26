@@ -25,7 +25,7 @@ dependencies {
                 "io.github.bonigarcia:webdrivermanager:$wdmVersion"
                 "org.slf4j:slf4j-api:$slf4jVersion"
                 
-    runtime "org.slf4j:slf4j-jdk14:$slf4jVersion"
+    runtimeOnly "org.slf4j:slf4j-jdk14:$slf4jVersion"
 
 }
 
