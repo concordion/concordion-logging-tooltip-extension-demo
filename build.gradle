@@ -13,14 +13,16 @@ repositories {
 ext {
 	concordionVersion = "2.2.0"	
 	concordionLoggingVersion = "[1.1.2,)"	
-	seleniumVersion = "3+"	
-	slf4jVersion = "1.6.1"	
+	seleniumVersion = "3+"
+    wdmVersion = "4.+"
+	slf4jVersion = "1.6.1"
 }
 
 dependencies {
     testCompile "org.concordion:concordion:$concordionVersion",
                 "org.concordion:concordion-logging-tooltip-extension:$concordionLoggingVersion",
                 "org.seleniumhq.selenium:selenium-java:$seleniumVersion",
+                "io.github.bonigarcia:webdrivermanager:$wdmVersion"
                 "org.slf4j:slf4j-api:$slf4jVersion"
                 
     runtime "org.slf4j:slf4j-jdk14:$slf4jVersion"
