@@ -68,6 +68,13 @@
     </dependency>
 
     <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${wdm.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j.version}</version>
@@ -113,7 +120,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium.version>[2.43.0,)</selenium.version>
-    <slf4j.version>1.6.1</slf4j.version>    
+    <wdm.version>[4.4.0,)</wdm.version>
+    <slf4j.version>1.6.1</slf4j.version>
     <concordion.version>3.0.1</concordion.version>
     <concordion-logging-extension.version>1.1.2</concordion-logging-extension.version>
   </properties>
