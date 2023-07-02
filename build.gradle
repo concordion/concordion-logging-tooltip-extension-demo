@@ -11,7 +11,7 @@ repositories {
 }
 
 ext {
-	concordionVersion = "2.2.0"	
+	concordionVersion = "4.0.0"	
 	concordionLoggingVersion = "[1.1.2,)"	
 	seleniumVersion = "3+"
     wdmVersion = "4.+"
